@@ -9,6 +9,10 @@ namespace GuessingGame
             int numberToGuess = 0;
             string message = "Hello World";
             Console.WriteLine(message);
+
+            string farewell = "Thank you. Goodbye";
+
+            Console.WriteLine(farewell);
         }
     }
 }
