@@ -28,10 +28,10 @@ namespace GuessingGame
                     Console.WriteLine("\nYou Win!");
                     guessAgain = false;
                 }
-                else if (guess = 0)
+                else if (guess == 0) 
                 {
                     Console.WriteLine("\nINSTRUCTIONS");
-                    Console.WriteLine("You have 2 more tries to guess a number between 1-100.");
+                    Console.WriteLine("You have 3 tries to guess a number between 1-100.");
                     Console.WriteLine("I will tell you if you are too high or too low or just right!");
                     Console.WriteLine("Enter 0 to return to the instructions.");
                     Console.WriteLine("Enter -1 to exit the game.");
@@ -54,13 +54,8 @@ namespace GuessingGame
                 }
             } while (guessAgain && (numberGuesses < 3));
             
-            Console.WriteLine("\nThe number was " + randomNumber + ".\nThanks for playing!");
-            Console.WriteLine($"\nThe number was {randomNumber}. \nThanks for playing!");
             Console.WriteLine("\nThe number was {0}. You guessed {1} times. \nThanks for playing!", randomNumber, numberGuesses);
-
-
-
-
+            Console.ReadLine();
 
         }
     }
