@@ -23,35 +23,42 @@ namespace GuessingGame
             {
                 Console.WriteLine("Please guess a number between 1-100:  ");
                 int guess = Convert.ToInt32(Console.ReadLine());
-                if(guess == randomNumber)
+                if (guess == randomNumber)
                 {
                     Console.WriteLine("\nYou Win!");
                     guessAgain = false;
                 }
-                else if (guess =0)
+                else if (guess = 0)
                 {
                     Console.WriteLine("\nINSTRUCTIONS");
-                    Console.WriteLine("You have 3 tries to guess a number between 1-100.");
-                    Console.WriteLine("I will tell you if you are high or too low or just right!");
+                    Console.WriteLine("You have 2 more tries to guess a number between 1-100.");
+                    Console.WriteLine("I will tell you if you are too high or too low or just right!");
                     Console.WriteLine("Enter 0 to return to the instructions.");
                     Console.WriteLine("Enter -1 to exit the game.");
 
                 }
                 else if (guess == -1)
                 {
+                    guessAgain = false;
 
                 }
+                else if (guess < randomNumber)
+                {
+                    Console.WriteLine("Too low");
+                    numberGuesses++;
+                }
+                else if (guess > randomNumber)
+                {
+                    Console.WriteLine("Too High");
+                    numberGuesses++;
+                }
+
             }
 
+            Console.WriteLine("\nThe number was " + randomNumber + "\nThanks for playing!");
 
-            int numberToGuess = 0;
-            string message = "Welcome to the guessing game";
-            Console.WriteLine(message);
 
-            string farewell = "Thank you. Goodbye";
 
-            Console.WriteLine(farewell);
-            Console.ReadLine();
         }
     }
 }
