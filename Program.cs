@@ -52,10 +52,13 @@ namespace GuessingGame
                     Console.WriteLine("Too High");
                     numberGuesses++;
                 }
+            } while (guessAgain && (numberGuesses < 3));
+            
+            Console.WriteLine("\nThe number was " + randomNumber + ".\nThanks for playing!");
+            Console.WriteLine($"\nThe number was {randomNumber}. \nThanks for playing!");
+            Console.WriteLine("\nThe number was {0}. You guessed {1} times. \nThanks for playing!", randomNumber, numberGuesses);
 
-            }
 
-            Console.WriteLine("\nThe number was " + randomNumber + "\nThanks for playing!");
 
 
 
